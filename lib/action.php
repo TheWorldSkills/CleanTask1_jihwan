@@ -37,12 +37,20 @@
         break; 
 
         //Menu_POST
-        case "postMenu":
+        case "postmenu":
             re([
                 $mContent,
             ]);
-            print_r($mContent);
-            $menu = execute("insert into menu set mContent = ?", array($mContent));
-            // alert("저장이 완료 되었습니다.", "/page/preference");
+            $menu = execute("insert into menu set mContent = ?, mIdx = ?", array($mContent, $_SESSION['member']->idx));
+            alert("저장이 완료 되었습니다.", "/page/preferences");
+        break;
+
+        //Board_POST
+        case "postboard":
+            re([
+                $bContent,
+            ]);
+            $board = execute("insert into board set bContent = ?", array($bContent, $_SESSION['member']->idx));
+            // alert("저장이 완료 되었습니다.", "/page/preferences");
     }
 ?>

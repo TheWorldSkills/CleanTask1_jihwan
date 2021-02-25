@@ -18,7 +18,7 @@
                             <div class="margin-bottom">
                                 <h2 class="page-header">메뉴등록</h2>
                                 <div class="testimonial">
-                                    <form class="menuwrite" action="/action/postMenu" method="post">
+                                    <form class="menuwrite" action="/action/postmenu" method="post">
                                         <label>메뉴이름
                                             <span class="color-red">*</span>
                                         </label>
@@ -51,6 +51,9 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                        <?php
+                                            
+                                        ?>
                                             <tr>
                                                 <td>
                                                     2
@@ -61,29 +64,6 @@
                                                 <td>
                                                     <select class="form-control input-sm">
                                                         <option>선택</option>
-                                                        <option>board3</option>
-                                                        <option>board2</option>
-                                                        <option>board1</option>
-                                                    </select>
-                                                </td>
-                                                <td>
-                                                    <button class="btn btn-default btn-xs" type="button">게시판등록</button>
-                                                    <button class="btn btn-default btn-xs" type="button">메뉴삭제</button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    1
-                                                </td>
-                                                <td>
-                                                    메뉴이름1
-                                                </td>
-                                                <td>
-                                                    <select class="form-control input-sm">
-                                                        <option>선택</option>
-                                                        <option>board3</option>
-                                                        <option>board2</option>
-                                                        <option>board1</option>
                                                     </select>
                                                 </td>
                                                 <td>
@@ -99,11 +79,11 @@
                             <div class="margin-bottom">
                                 <h2 class="page-header">게시판등록</h2>
                                 <div class="testimonial">
-                                    <form class="menuwrite">
+                                    <form class="menuwrite" action="/action/postboard" method="post">
                                         <label>게시판아이디
                                             <span class="color-red">*</span>
                                         </label>
-                                        <input class="form-control margin-bottom-20" type="text">
+                                        <input class="form-control margin-bottom-20" type="text" name="bContent">
                                         <div class="col-lg-12 text-right">
                                             <button class="btn btn-primary btn-sm" type="submit">게시판등록</button>
                                         </div>

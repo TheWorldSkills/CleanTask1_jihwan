@@ -56,5 +56,8 @@
         include "./lib/action.php";
         exit;
     }
+
+    //현재 memberidx 확인
+    $current_user =  $SESSIONEDMEMBERS -> idx;
 ?>
 
