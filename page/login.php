@@ -1,3 +1,8 @@
+<?php 
+    if($SESSIONEDMEMBERS){
+        alert("이미 로그인 돼 있습니다.");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

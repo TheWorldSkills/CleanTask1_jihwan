@@ -33,11 +33,20 @@
     }
 
     // js 경고창을 php로 호출할 수 있게 하는 함수.
-    function alert($msg=NULL, $parame=NULL){
+    function alert($msg=NULL, $url=NULL){
         echo "<script>";
         echo $msg ? "alert('{$msg}');" : "";
         echo $url ? "document.location.href='{$url}'" : "history.back()";
         echo "</script>";
+        exit;
+    }
+
+    //login_SESSION 확인
+    $SESSIONEDMEMBERS = isset($_SESSION['member']) ? $_SESSION['member'] : NULL;
+
+    // pagemode checking
+    if($pagemode == "action"){
+        include "./lib/action.php";
         exit;
     }
 ?>

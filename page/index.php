@@ -43,22 +43,22 @@
                 <div class="pull-right">
                     <ul class="navi">
                         <li>
-                            <a href="login.html" title="로그인">
+                            <a href="page/login" title="로그인">
                                 로그인
                             </a>
                         </li>
                         <li>
-                            <a href="join.html" title="회원가입">
+                            <a href="page/join" title="회원가입">
                                 회원가입
                             </a>
                         </li>
                         <li>
-                            <a href="myblog.html" title="내 블로그" target="_blank">
+                            <a href="page/myblog" title="내 블로그" target="_blank">
                                 내 블로그
                             </a>
                         </li>
                         <li>
-                            <a href="preferences.html" title="블로그관리">
+                            <a href="page/preferences" title="블로그관리">
                                 블로그관리
                             </a>
                         </li>
@@ -90,58 +90,14 @@
             </div>
         </div>
     </section>
-    
-    <!-- contents -->
-    <section id="contents">
-        <div class="container">
-            <div class="row">
-                <div class="main-content">
-                    <h1 class="antitle">Top Bloger</h1>
-
-                    <!-- content inner -->
-                    <div class="col-md-4"> 
-                        <div class="anonymous">
-                            <img src="images/anonymous.png" title="anonymous" width="90%">
-                            <h3>
-                                JHON DOE
-                            </h3>
-                            <span>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua.
-                            </span>
-                        </div>
-                    </div>
-                    <div class="col-md-4">  
-                         <div class="anonymous">
-                            <img src="images/anonymous.png" title="anonymous" width="90%">
-                            <h3>
-                                NIKOLAI
-                            </h3>
-                            <span>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua.
-                            </span>
-                        </div>
-                    </div>
-                    <div class="col-md-4">  
-                        <div class="anonymous">
-                            <img src="images/anonymous.png" title="anonymous" width="90%">
-                            <h3>
-                                BRAD PITT
-                            </h3>
-                            <span>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua.
-                            </span>
-                        </div>
-                    </div>
-                    <!-- content inner -->
-
-                </div>
-            </div>
-        </div>
-    </section>
-    
+    <?php 
+        if(!file_exists("./page/{$midx}.php")){
+            echo "해당 페이지는 현재 접근할 수 없습니다";
+        }
+        else{
+            include "./page/{$midx}.php";
+        }
+    ?>
     <!-- footer -->
     <footer id="footer">
         <div class="container">
