@@ -31,6 +31,13 @@
     function rowCount($sql, $parame = NULL){
         return execute($sql, $parame)->rowCount();
     }
+    function re($data){
+        foreach($data as $key => $val){
+            if($val == NULL){
+                alert("입력을 다시 확인해주세요.");
+            }
+        }
+    }
 
     // js 경고창을 php로 호출할 수 있게 하는 함수.
     function alert($msg=NULL, $url=NULL){
