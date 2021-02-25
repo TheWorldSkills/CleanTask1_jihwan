@@ -1,7 +1,7 @@
 <?php 
-    // if($SESSIONEDMEMBERS){
-    //     alert("비회원만 접근 가능합니다.", "/");
-    // }
+    if($SESSIONEDMEMBERS){
+        alert("비회원만 접근 가능합니다.", "/");
+    }
 ?>
     <!-- contents -->
     <section id="contents">

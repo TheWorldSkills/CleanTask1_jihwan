@@ -42,23 +42,34 @@
                 </div>
                 <div class="pull-right">
                     <ul class="navi">
+                    <?php
+                        if(! $SESSIONEDMEMBERS){
+                    ?>
                         <li>
-                            <a href="page/login" title="로그인">
+                            <a href="/page/login" title="로그인">
                                 로그인
                             </a>
                         </li>
                         <li>
-                            <a href="page/join" title="회원가입">
+                            <a href="/page/join" title="회원가입">
                                 회원가입
                             </a>
                         </li>
+                        <?php } else{ ?>
                         <li>
-                            <a href="page/myblog" title="내 블로그" target="_blank">
+                         <!-- action으로 바로 보내버리기  -->
+                            <a href="/action/logout" title="로그아웃">
+                                로그아웃
+                            </a>
+                        </li>
+                        <?php } ?>
+                        <li>
+                            <a href="/page/myblog" title="내 블로그" target="_blank">
                                 내 블로그
                             </a>
                         </li>
                         <li>
-                            <a href="page/preferences" title="블로그관리">
+                            <a href="/page/preferences" title="블로그관리">
                                 블로그관리
                             </a>
                         </li>
